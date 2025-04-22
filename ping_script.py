@@ -1,23 +1,7 @@
 import requests
-import schedule
-import time
-import logging
 
-def ping_endpoints():
-    endpoints = [
-        "https://recipe-inline.onrender.com:10000/ping"
-    ]
-    
-    for url in endpoints:
-        try:
-            response = requests.get(url, timeout=10)
-            logging.info(f"Pinged {url}. Status code: {response.status_code}")
-        except Exception as e:
-            logging.error(f"Error pinging {url}: {e}")
+url = 'http://recipe-inline.onrender.com/'
 
-def main():
-    logging.basicConfig(level=logging.INFO)
-    ping_endpoints()
+x = requests.post(url)
 
-if __name__ == "__main__":
-    main()
+print(x.text)
