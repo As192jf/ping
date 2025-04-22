@@ -5,7 +5,7 @@ import logging
 
 def ping_endpoints():
     endpoints = [
-        "https://recipe-inline.onrender:10000.com/ping"
+        "https://recipe-inline.onrender.com:10000/ping"
     ]
     
     for url in endpoints:
